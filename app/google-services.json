@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "170919492427",
+    "project_id": "unitechmaxitaxi",
+    "storage_bucket": "unitechmaxitaxi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:170919492427:android:c05f51e7d630c5a69a46ce",
+        "android_client_info": {
+          "package_name": "com.example.maxitexi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "170919492427-mib163pknn045rcnc7ajfj0lerhbc6uq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.maxitexi",
+            "certificate_hash": "1a97b6973d0a9496c9570c3b6429c5a7cd67e352"
+          }
+        },
+        {
+          "client_id": "170919492427-rvh0s2dsumsc281p7c2p509trjdiicrn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTcTPtvl7Aqw21S1g_WZuaEE0XebBTAbA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "170919492427-rvh0s2dsumsc281p7c2p509trjdiicrn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
