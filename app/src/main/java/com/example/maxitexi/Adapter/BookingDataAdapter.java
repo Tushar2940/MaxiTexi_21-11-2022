@@ -28,7 +28,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class BookingDataAdapter extends RecyclerView.Adapter<BookingDataAdapter.ViewHolder> {
+    public class BookingDataAdapter extends RecyclerView.Adapter<BookingDataAdapter.ViewHolder> {
 
     Context context;
     List<BookingData.BookingDataList> bookingDataAdapterList;
@@ -59,15 +59,16 @@ public class BookingDataAdapter extends RecyclerView.Adapter<BookingDataAdapter.
             holder.price.setText("" + bookingDataAdapterList.get(position).getPrice());
             holder.totalDistance.setText("" + bookingDataAdapterList.get(position).getTotalDistance());
             holder.totalTime.setText("" + bookingDataAdapterList.get(position).getTotalTime());
+            holder.pickupTime.setText("" + bookingDataAdapterList.get(position).getTime());
             holder.flightNo.setText("" + bookingDataAdapterList.get(position).getFlightno());
             holder.discription.setText("" + bookingDataAdapterList.get(position).getRemarks());
             holder.email.setText("" + bookingDataAdapterList.get(position).getEmail());
             holder.status.setText("" + bookingDataAdapterList.get(position).getStatus());
-            if (bookingDataAdapterList.get(position).getPaymentType().equals("1")) {
+            /*if (bookingDataAdapterList.get(position).getPaymentType().equals("1")) {
                 holder.paymentType.setText("Cash");
             } else {
                 holder.paymentType.setText("Card");
-            }
+            }*/
 
         if (bookingDataAdapterList.get(position).getStatus().equals("1")) {
             holder.status.setText("Pending");
@@ -110,7 +111,7 @@ public class BookingDataAdapter extends RecyclerView.Adapter<BookingDataAdapter.
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView bookingNo,email,status,date,name,pickup,dropoff,totalPassager,price,totalDistance,totalTime,flightNo,discription,paymentType;
+        TextView bookingNo,email,status,date,name,pickup,pickupTime,dropoff,totalPassager,price,totalDistance,totalTime,flightNo,discription,paymentType;
         Button btnConfirm,btnNotConfirm;
         ImageView imgdown,imgup;
         LinearLayout datalinear,linearLine;
@@ -128,7 +129,7 @@ public class BookingDataAdapter extends RecyclerView.Adapter<BookingDataAdapter.
             totalDistance = itemView.findViewById(R.id.totalDistance);
             totalTime = itemView.findViewById(R.id.totalTime);
             flightNo = itemView.findViewById(R.id.flightNo);
-            paymentType = itemView.findViewById(R.id.paymentType);
+            /*paymentType = itemView.findViewById(R.id.paymentType);*/
             btnConfirm = itemView.findViewById(R.id.btnConfirm);
             btnNotConfirm = itemView.findViewById(R.id.btnNotConfirm);
             imgdown = itemView.findViewById(R.id.imgdown);
@@ -138,6 +139,7 @@ public class BookingDataAdapter extends RecyclerView.Adapter<BookingDataAdapter.
             linearLine = itemView.findViewById(R.id.linearLine);
             discription = itemView.findViewById(R.id.discription);
             status = itemView.findViewById(R.id.status);
+            pickupTime = itemView.findViewById(R.id.pickupTime);
             progressDialog = new CustomProgressDialog(context);
 
             apiCalling = MyApplication.getRetrofit().create(ApiCalling.class);
